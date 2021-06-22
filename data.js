@@ -27,4 +27,8 @@ let people = [
     name: 'Chris',
     githubUsername: 'christopher-black'
   },
+  {
+    name: 'Jose',
+    githubUsername: 'rubioz310'
+  }
 ];

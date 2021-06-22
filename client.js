@@ -68,7 +68,7 @@ function wrongAnswer(clickedName){
 //Picks a new random person to find in the pictures
 function updateName(){
     let randomName = people[randomNumber(0, people.length - 1)];
-    $('#personName').text(`Click on: ${randomName.name}`);
+    $('#personName').text(`Guess who is: ${randomName.name}`);
     $('#personName').data('name', `${randomName.name}`);
 }
 
