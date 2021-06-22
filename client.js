@@ -4,7 +4,7 @@ function readyNow(){
     updateName();
     showPictures();
     $('#gameSection').on('click', 'img', function(){
-        showName($(this).data('name'));
+        guessWho($(this).data('name'));
     })
 }
 
@@ -16,13 +16,19 @@ function showPictures(){
     }
 }
 
-function showName(name){
-    console.log(name);
+function guessWho(clickedName){
+    if( clickedName == $('#personName').data('name')){
+        alert('You got that right, awesome!. Play again');
+        updateName();
+    }else(
+        alert('Oops! Wrong one. Try again')
+    )
 }
 
 function updateName(){
     let randomName = people[randomNumber(0, people.length - 1)];
     $('#personName').text(`Click on: ${randomName.name}`);
+    $('#personName').data('name', `${randomName.name}`);
 }
 
 
